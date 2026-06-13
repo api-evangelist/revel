@@ -1,0 +1,56 @@
+name: Revel Systems API Rate Limits
+description: >-
+  Revel Systems enforces daily API rate limits on its REST API. When a rate
+  limit is exceeded, the API returns HTTP status code 429. Specific thresholds
+  are not publicly documented and may vary by customer contract or partner
+  tier. Revel does not publish a formal rate limiting policy in its public
+  developer documentation.
+url: https://developer.revelsystems.com/revelsystems/docs/frequently-asked-questions
+created: "2026-06-13"
+modified: "2026-06-13"
+rateLimits:
+  - name: Daily API Call Limit
+    description: >-
+      Revel enforces daily limits on API calls. Exceeding the limit results
+      in an HTTP 429 Too Many Requests response. The specific limit is not
+      publicly documented and is likely negotiated per-partner or determined
+      by the subscription tier.
+    type: daily
+    limit: unspecified
+    period: 24 hours
+    headers:
+      - name: HTTP 429
+        description: >-
+          Returned when the daily API limit is exceeded. Clients should
+          back off and retry after waiting for the daily limit window to
+          reset.
+    notes: >-
+      The FAQ documentation confirms that status code 429 indicates exceeded
+      daily API limits, but does not specify the threshold. Partners should
+      contact Revel/Shift4 sales or developer support to confirm their
+      specific rate limit allowances.
+  - name: Token Expiry (API Platform)
+    description: >-
+      Bearer tokens issued via OAuth 2.0 client credentials flow expire
+      after 24 hours. Generating a new token does not invalidate the previous
+      token, enabling seamless rotation. This is a token lifetime constraint
+      rather than a call-rate constraint.
+    type: token-lifetime
+    limit: 1
+    period: 24 hours
+    notes: >-
+      Applications should refresh their Bearer token before the 24-hour
+      expiry to avoid authentication failures. The token endpoint is
+      https://authentication.revelup.com/oauth/token for production and
+      https://authentication.qa.revelup.com/oauth/token for QA.
+httpStatusCodes:
+  - code: 200
+    description: Successful GET or PUT request
+  - code: 201
+    description: Successful POST (resource created)
+  - code: 202
+    description: Successful PATCH (partial update accepted)
+  - code: 429
+    description: Rate limit exceeded — daily API call limit reached
+  - code: 500
+    description: Internal server error

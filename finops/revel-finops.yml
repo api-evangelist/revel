@@ -1,0 +1,99 @@
+name: Revel Systems API FinOps
+description: >-
+  Financial operations considerations for integrating with the Revel Systems
+  API. Revel (now part of Shift4 Payments) does not charge separately for API
+  usage — API access is bundled into the POS platform subscription. The main
+  cost drivers are per-terminal licensing fees, contract length, and any
+  add-on modules (loyalty, delivery, data connector). Cost management focuses
+  on minimizing unnecessary API calls to stay within undisclosed daily rate
+  limits and optimizing data retrieval to reduce integration overhead.
+url: https://developer.revelsystems.com/
+created: "2026-06-13"
+modified: "2026-06-13"
+costModel:
+  type: bundled
+  description: >-
+    API access is included in the Revel Systems platform subscription. There
+    is no separate API usage fee or metered billing for API calls. Costs are
+    driven by per-terminal monthly fees and contract commitments.
+  notes: >-
+    Revel is now part of Shift4 Payments following acquisition. Pricing and
+    contract structures may evolve. All procurement goes through Shift4/Revel
+    sales. Public pricing is not available.
+costDrivers:
+  - name: Per-Terminal Licensing
+    description: >-
+      The primary cost driver. Each POS terminal (iPad) requires a monthly
+      subscription. Estimated at ~$99/month per terminal, but actual pricing
+      is negotiated. More terminals = higher monthly recurring cost.
+    type: recurring
+    unit: per terminal / month
+  - name: Contract Length
+    description: >-
+      Revel typically requires multi-year contracts (commonly 3 years).
+      Early termination carries significant fees. Longer contracts may
+      provide lower per-terminal rates. This is a commitment risk that
+      should be factored into FinOps planning.
+    type: commitment
+  - name: Add-On Modules
+    description: >-
+      Optional modules such as Revel Data Connector, Loyalty XT, Delivery XT,
+      Revel Guard XT, and third-party integrations (Paytronix, Punchh,
+      FreedomPay, Adyen, etc.) may carry additional licensing costs.
+    type: recurring
+  - name: Hardware (iPads, peripherals)
+    description: >-
+      Revel is an iPad-based system. Hardware costs (iPads, stands, card
+      readers, printers, cash drawers) are separate from software licensing
+      and represent a one-time capital expenditure per terminal deployment.
+    type: one-time
+optimizationStrategies:
+  - name: Avoid Unnecessary API Polling
+    description: >-
+      Revel enforces daily API rate limits (429 responses when exceeded).
+      Use webhooks and callbacks instead of polling where available to
+      reduce call volume and avoid hitting undisclosed daily limits.
+  - name: Efficient Data Retrieval
+    description: >-
+      Use the API's filtering parameters (double-underscore syntax for
+      comparisons, ranges, text matching) to retrieve only needed records.
+      The API does not support server-side aggregation, so efficient
+      filtering at query time reduces data transfer and processing overhead.
+  - name: Token Caching
+    description: >-
+      Bearer tokens (API Platform auth) are valid for 24 hours. Cache and
+      reuse tokens rather than generating a new token per request.
+      New tokens do not invalidate old ones, so rotation can be done
+      proactively without service interruption.
+  - name: Right-Size Terminal Count
+    description: >-
+      Since cost scales per terminal, audit active vs. inactive terminals
+      regularly. Decommission terminals not in active use to reduce monthly
+      licensing spend.
+  - name: Use Dedicated QA Environment
+    description: >-
+      API partners receive a dedicated QA/testing instance. Use this for
+      all development and integration testing to avoid impacting production
+      data and to ensure API call budgets in production are reserved for
+      live operations.
+risks:
+  - name: No Public Pricing Transparency
+    description: >-
+      Revel does not publish pricing. Budget forecasting requires active
+      vendor engagement and may be subject to change, especially following
+      the Shift4 acquisition.
+  - name: Multi-Year Contract Lock-In
+    description: >-
+      3-year contracts with early termination fees create financial risk if
+      business needs change. Factor termination costs into total cost of
+      ownership calculations.
+  - name: Undisclosed Rate Limits
+    description: >-
+      Specific daily API call limits are not publicly documented. High-volume
+      integrations risk hitting 429 errors without clear guidance on
+      thresholds. Proactive monitoring of 429 responses is essential.
+  - name: Platform Acquisition Risk
+    description: >-
+      Revel Systems was acquired by Shift4 Payments. API policies, pricing,
+      and platform continuity may change. Monitor Shift4/Revel communications
+      for changes to API availability or terms.

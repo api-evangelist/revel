@@ -1,0 +1,62 @@
+name: Revel Systems Plans and Pricing
+description: >-
+  Revel Systems does not publish public self-serve pricing. Access to the
+  platform and its API requires a sales engagement. The platform is sold on
+  per-terminal subscription basis with multi-year contracts. API access is
+  available to integration partners and enterprise customers through the
+  Revel Developer Portal. Revel is now part of Shift4 Payments.
+url: https://revelsystems.com/pricing/
+created: "2026-06-13"
+modified: "2026-06-13"
+plans:
+  - name: Standard POS Subscription
+    description: >-
+      Per-terminal monthly subscription for the Revel Systems iPad POS
+      platform. Includes access to the management console, basic API access,
+      and standard support. Pricing is negotiated through sales and typically
+      requires a multi-year contract.
+    url: https://revelsystems.com/pricing/
+    pricing:
+      - price: 99.00
+        unit: per terminal / month (estimated baseline)
+        currency: USD
+        notes: >-
+          Revel does not publish official pricing. Industry estimates place
+          the baseline at approximately $99/month per terminal. Actual pricing
+          is determined through a sales process and varies by contract length,
+          number of terminals, and selected add-ons. Multi-year contracts
+          (typically 3 years) are required.
+    features:
+      - iPad-based POS system
+      - Order and payment management
+      - Inventory tracking
+      - Basic API access (~140 public endpoints)
+      - Management console access
+      - Standard customer support
+  - name: Enterprise / API Partner Program
+    description: >-
+      For integration partners and enterprise customers requiring deep API
+      access. Includes a dedicated testing instance, backend access for
+      validating API calls, and access to the API Platform with Bearer token
+      authentication. Requires an API partner agreement with Revel.
+    url: https://developer.revelsystems.com/
+    pricing:
+      - price: 0
+        unit: contact sales
+        currency: USD
+        notes: >-
+          API partner access is available through a separate agreement.
+          Partners receive a dedicated QA/testing instance. Pricing is
+          negotiated as part of the overall enterprise engagement.
+    features:
+      - Full REST API access (~140 endpoints)
+      - OAuth 2.0 Bearer token authentication (API Platform)
+      - API key/secret authentication (legacy)
+      - Dedicated QA testing instance
+      - Webhook and callback support
+      - Access to Revel Data Connector
+      - Integration partner support
+notes: >-
+  Revel Systems (formerly revelsystems.com) now redirects to Shift4 Payments
+  (shift4.com). All pricing inquiries should go through Shift4/Revel sales.
+  API access policies may change following the Shift4 acquisition.

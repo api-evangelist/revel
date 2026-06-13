@@ -1,0 +1,88 @@
+aid: revel
+name: Revel Systems
+description: >-
+  Revel Systems is an iPad-based point-of-sale platform for restaurants and
+  retail businesses. Its REST API provides programmatic access to menus,
+  orders, inventory, loyalty programs, customer data, employee scheduling,
+  cash management, and business analytics. The API supports approximately 140
+  public endpoints and returns responses in JSON. Authentication uses either
+  API key/secret headers or Bearer tokens via OAuth 2.0 client credentials.
+  Revel is now part of Shift4 Payments.
+image: >-
+  https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/revel/refs/heads/main/apis.yml
+created: "2026-06-13"
+modified: "2026-06-13"
+specificationVersion: "0.19"
+tags:
+  - POS
+  - Point of Sale
+  - Restaurant
+  - Retail
+  - iPad
+  - Orders
+  - Inventory
+  - Loyalty
+  - Payments
+apis:
+  - aid: revel:revel-api
+    name: Revel Systems API
+    description: >-
+      REST API for the Revel Systems iPad POS platform, covering orders,
+      payments, products, inventory, customers, employees, scheduling, cash
+      management, discounts, tax, tables, purchase orders, house accounts,
+      and web orders. Approximately 140 public endpoints return JSON responses
+      and support GET, POST, PUT, PATCH, and DELETE methods.
+    image: >-
+      https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    baseURL: https://[yoursubdomain].revelup.com/resources/
+    humanURL: https://developer.revelsystems.com/
+    overlays: []
+    contact:
+      - FN: Revel Systems Developer Support
+        url: https://support.revelsystems.com/
+    tags:
+      - POS
+      - Orders
+      - Payments
+      - Inventory
+      - Loyalty
+      - Restaurant
+      - Retail
+    properties:
+      - type: Documentation
+        url: https://developer.revelsystems.com/revelsystems/docs/rest-api
+      - type: Authentication
+        url: >-
+          https://developer.revelsystems.com/revelsystems/docs/api-platform-authentication
+common:
+  - type: Website
+    url: https://revelsystems.com/
+  - type: Documentation
+    url: https://developer.revelsystems.com/
+  - type: GitHubOrg
+    url: https://github.com/letsrevel
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/revel-systems
+  - type: Blog
+    url: https://revelsystems.com/blog/
+  - type: Pricing
+    url: https://revelsystems.com/pricing/
+  - type: StatusPage
+    url: https://status.revelsystems.com/
+  - type: X
+    url: https://twitter.com/RevelSystems
+  - type: Plans
+    url: plans/revel-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/revel-rate-limits.yml
+  - type: FinOps
+    url: finops/revel-finops.yml
+  - type: Support
+    url: https://support.revelsystems.com/
+  - type: ChangeLog
+    url: https://support.revelsystems.com/s/article/Revel-Systems-Change-Log
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
