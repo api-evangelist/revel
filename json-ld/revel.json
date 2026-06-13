@@ -1,0 +1,92 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Revel Systems API",
+  "description": "REST API for the Revel Systems iPad POS platform, covering orders, payments, products, inventory, customers, employees, scheduling, cash management, discounts, tax, tables, purchase orders, house accounts, and web orders. Approximately 140 public endpoints return JSON responses.",
+  "url": "https://developer.revelsystems.com/",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Point of Sale",
+  "operatingSystem": "Cloud",
+  "offers": {
+    "@type": "Offer",
+    "url": "https://revelsystems.com/pricing/"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Revel Systems",
+    "url": "https://revelsystems.com/",
+    "sameAs": [
+      "https://www.linkedin.com/company/revel-systems",
+      "https://twitter.com/RevelSystems",
+      "https://github.com/letsrevel"
+    ],
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Shift4 Payments",
+      "url": "https://www.shift4.com/"
+    }
+  },
+  "documentation": "https://developer.revelsystems.com/revelsystems/docs/rest-api",
+  "featureList": [
+    "Orders management",
+    "Payments processing",
+    "Product and inventory management",
+    "Customer management",
+    "Employee scheduling",
+    "Cash management",
+    "Loyalty programs",
+    "Discounts and promotions",
+    "Tax management",
+    "Table management",
+    "Purchase orders",
+    "House accounts",
+    "Web orders",
+    "Webhooks and callbacks",
+    "Business analytics"
+  ],
+  "softwareVersion": "v2025.3.0",
+  "releaseNotes": "https://support.revelsystems.com/s/article/Revel-Systems-Change-Log",
+  "termsOfService": "https://revelsystems.com/",
+  "supportingData": {
+    "@type": "DataFeed",
+    "encodingFormat": "application/json",
+    "description": "API responses are returned in JSON format"
+  },
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Authentication",
+      "value": "OAuth 2.0 Client Credentials (Bearer token) or API key/secret headers"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "BaseURL",
+      "value": "https://[yoursubdomain].revelup.com/resources/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "ProductionAPIURL",
+      "value": "https://api.revelsystems.com/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "QAAPIUrl",
+      "value": "https://api.qa.revelup.io/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "TokenEndpoint",
+      "value": "https://authentication.revelup.com/oauth/token"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "EndpointCount",
+      "value": "~140 public endpoints"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Industry",
+      "value": "Restaurant and Retail POS"
+    }
+  ]
+}
