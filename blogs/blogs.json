@@ -5,5 +5,14 @@
   "url": "https://revelsystems.com/blog/",
   "note": "Revel Systems blog redirects to Shift4 Payments (https://www.shift4.com/food-beverage) following acquisition.",
   "modified": "2026-06-13",
-  "posts": []
+  "posts": [],
+  "repo": "revel",
+  "feeds": [
+    {
+      "source": "https://www.linkedin.com/company/revel-systems",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
