@@ -9,7 +9,7 @@ description: >-
   API key/secret headers or Bearer tokens via OAuth 2.0 client credentials.
   Revel is now part of Shift4 Payments.
 image: >-
-  https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+  https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: >-
   https://raw.githubusercontent.com/api-evangelist/revel/refs/heads/main/apis.yml
 created: "2026-06-13"
@@ -35,7 +35,7 @@ apis:
       and web orders. Approximately 140 public endpoints return JSON responses
       and support GET, POST, PUT, PATCH, and DELETE methods.
     image: >-
-      https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://[yoursubdomain].revelup.com/resources/
     humanURL: https://developer.revelsystems.com/
     overlays: []
