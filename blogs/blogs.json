@@ -3,16 +3,16 @@
   "name": "Revel Systems Blog",
   "description": "Blog posts and articles from Revel Systems (now part of Shift4 Payments), covering POS technology, restaurant and retail industry insights, product updates, and payment solutions.",
   "url": "https://revelsystems.com/blog/",
-  "note": "Revel Systems blog redirects to Shift4 Payments (https://www.shift4.com/food-beverage) following acquisition.",
+  "note": "Revel Systems blog redirects (301) to Shift4 Payments (https://www.shift4.com/food-beverage) following acquisition; no RSS/Atom feed resolves (feed/, rss/ all 301) and the redirect target is a marketing landing page, not a blog index.",
   "modified": "2026-06-13",
-  "posts": [],
   "repo": "revel",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/revel-systems",
-      "error": "HTTPError"
+      "source": "https://revelsystems.com/blog/",
+      "saved": 0,
+      "error": "301 off-host redirect to shift4.com/food-beverage (403, marketing page, no blog index)"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:06:42Z"
 }
