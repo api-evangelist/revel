@@ -8,11 +8,10 @@
   "repo": "revel",
   "feeds": [
     {
-      "source": "https://revelsystems.com/blog/",
-      "saved": 0,
-      "error": "301 off-host redirect to shift4.com/food-beverage (403, marketing page, no blog index)"
+      "source": "https://www.linkedin.com/company/revel-systems",
+      "error": "HTTPError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-27T13:06:42Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
