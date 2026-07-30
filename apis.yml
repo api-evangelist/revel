@@ -8,7 +8,19 @@ description: >-
   public endpoints and returns responses in JSON. Authentication uses either
   API key/secret headers or Bearer tokens via OAuth 2.0 client credentials.
   Revel is now part of Shift4 Payments.
-image: >-
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/revel.png
   https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: >-
   https://raw.githubusercontent.com/api-evangelist/revel/refs/heads/main/apis.yml
