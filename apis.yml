@@ -28,6 +28,15 @@ created: "2026-06-13"
 modified: "2026-06-13"
 specificationVersion: '0.23'
 tags:
+  - Point-of-Sale
+  - Restaurant
+  - Retail
+  - iPad
+  - Order
+  - Inventory
+  - Loyalty
+  - Payments
+tags_raw:
   - POS
   - Point of Sale
   - Restaurant
@@ -55,6 +64,14 @@ apis:
       - FN: Revel Systems Developer Support
         url: https://support.revelsystems.com/
     tags:
+      - Point-of-Sale
+      - Order
+      - Payments
+      - Inventory
+      - Loyalty
+      - Restaurant
+      - Retail
+    tags_raw:
       - POS
       - Orders
       - Payments
