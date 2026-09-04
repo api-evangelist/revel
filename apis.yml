@@ -29,6 +29,7 @@ accessModel:
   confidence: medium
   source:
   - plans
+  - {url: 'https://revelsystems.com/', status: 301, note: 'declared website redirects to https://www.shift4.com/food-beverage — a different registrable domain (revelsystems.com -> shift4.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/revel.png
